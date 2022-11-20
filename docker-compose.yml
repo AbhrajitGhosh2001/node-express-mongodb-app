@@ -10,7 +10,7 @@ services:
 #      - MONGO_INITDB_ROOT_PASSWORD=<SOME PASSWORD>
 #     ports:
 #       - 27017:27017
-    volumes:
+  volumes:
       - db:/data/db
   app:
     container_name: app
@@ -28,7 +28,7 @@ services:
       - MONGODB_URL = <COMBINED CONNECTION STRING> 
     stdin_open: true
     tty: true
-caddy:
+  caddy:
     image: caddy:latest
     restart: unless-stopped
     ports:

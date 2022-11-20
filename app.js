@@ -22,20 +22,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
-let harry={
-  name:"Harry Potter",
-  house: "Gryffindor"
+let Abhrajit={
+  name:"Abhrajit Ghosh",
+  bio: "I am a student of ualbany. I play soccer sometimes I can bike swim and longboard. I am studing computer science.",
+  pic:"https://abhrabucket.s3.amazonaws.com/les-qul300x300.jpg"
 }
-let remus={
-  name:"Remus Lupin",
-  house: "Gryffindor"
+let DiMaria={
+  name:"DiMaria",
+  bio: "I play soccer proffesionally on PSG and will play for Argentina this world cup.",
+  pic: "https://abhrabucket.s3.amazonaws.com/download.jfif"
 }
-let salazar={
-  name: "Salazar Slytherin",
-  house:"Slytherin"
+let Juliano={
+  name: "Juliano",
+  bio:"I play counter strike global offensive a esport proffesionally",
+  pic: "https://abhrabucket.s3.amazonaws.com/QCaCXQV.jpg"
 }
 
-let wizards= [harry, remus,salazar]
+let wizards= [Abhrajit, DiMaria,Juliano]
 
 app.get('/', (req, res, next) => {
   res.render(    'index'   ,    {  wizards: wizards  }     );
